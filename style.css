@@ -4,7 +4,7 @@ body {
     font-family: 'Comfortaa', cursive;
     color: #212121;
     background-color: #ffffff;
-    width: 100%;
+    width: 100vw;
     height: 100%;
     padding: 0;
     margin: 0;
@@ -12,10 +12,10 @@ body {
 
 .gerenalarea {
     position: relative;
-    width: 100%;
+    width: 84%;
 }
 
-.gerenalarea .specificarea .slide-pages {
+.slide-pages {
     min-height: 100%;
     max-width: 100%;
     display: flex;
@@ -26,8 +26,14 @@ body {
     padding-bottom: 70px;
 }
 
-.gerenalarea .specificarea .slide-pages .contentproje {
+.contentproje {
+    padding-top: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
     flex: 1 1 350px;
+    width: 100%;
+    height: 100%;
     animation: slideContent .4s linear .4s backwards;
 }
 
@@ -40,8 +46,12 @@ body {
 
 
 .tittle {
-    font-size: 50px;
-    color: #252525;
+    display: flex;
+    align-items: center;
+    width: 70%;
+    height: 8%;
+    font-size: 300%;
+    color: #ff0000;
     font-family: 'Comfortaa', cursive;
 }
 
@@ -49,14 +59,13 @@ body {
     font-size: 25px;
     color: #ffffff;
     font-family: 'Comfortaa', cursive;
-    width: 40%;
+    width: 50%;
     height: 10%;
+    padding-bottom: 5%;
 
 }
 
 .acessinsta {
-    margin-top: 10px;
-    display: inline-block;
     background: #000a6150;
     font-size: 17px;
     padding: 9px 40px;
@@ -81,7 +90,7 @@ body {
 }
 
 .specificarea:nth-child(1) .slide-pages {
-    background: url(./images/01.jpg);
+    background-image: url(./images/01.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -90,7 +99,7 @@ body {
 }
 
 .specificarea:nth-child(2) .slide-pages {
-    background: url(./images/02.jpg);
+    background-image: url(./images/02.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -99,7 +108,7 @@ body {
 }
 
 .specificarea:nth-child(3) .slide-pages {
-    background: url(./images/03.jpg);
+    background-image: url(./images/03.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -108,7 +117,7 @@ body {
 }
 
 .specificarea:nth-child(4) .slide-pages {
-    background: url(./images/04.jpg);
+    background-image: url(./images/04.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -117,7 +126,7 @@ body {
 }
 
 .specificarea:nth-child(5) .slide-pages {
-    background: url(./images/05.jpg);
+    background-image: url(./images/05.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -130,63 +139,47 @@ body {
 }
 .btn-nav{
     width: 100%;
-}
-.navegation-btn {
-    width: 20px;
-    height: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-    background: #0a1b2d;
+    height: 100%;
 }
 
-.gerenalarea #prev,
-.gerenalarea #next {
+.navegation-next {
     position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
+    width: 10%;
+    height: 100%;
+    top: 0%;
+    left: 0%;
     color: #ffffff;
-    background: #3f5f81;
-    height: 50px;
-    width: 50px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+    height: 100%;
     line-height: 50px;
     font-size: 25px;
     text-align: center;
     cursor: pointer;
     font-weight: bolder;
-    border-radius: 50px;
 }
-
-.gerenalarea #prox:hover {
-    background: #3f76b1;
+.navegation-prox {
+    position: absolute;
+    width: 10%;
+    height: 100%;
+    top: 0%;
+    left: 90%;
+    background-image: linear-gradient(to left, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+    height: 100%;
+    cursor: pointer;
+    font-weight: bolder;
 }
-
-.gerenalarea #next:hover {
-    background: #3f76b1;
+.navegation-prox:hover {
+    background-image: linear-gradient(to left, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+    transition: 0.5s ease;
 }
-
-.gerenalarea #prox {
-    left: 20px;
-}
-
-.gerenalarea #next {
-    right: 20px;
+.navegation-next:hover {
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+    transition: 0.5s ease;
 }
 
 
 
 @media(max-width: 500px) {
-    .gerenalarea #prev {
-        left: 0px;
-        top: 60%;
-    }
-
-    .containerproje #next {
-        right: 0px;
-        top: 60%;
-    }
-
 
     .description {
         font-size: 16px;
@@ -216,11 +209,10 @@ body {
 .card {
     color: #ffffff;
     border-radius: 8px;
-    width: 70%;
+    width: 100%;
     max-width: 500px;
     transition: 0.5s ease;
     overflow: hidden;
-    transform: translate(0);
     text-align: center;
 }
 
